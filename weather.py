@@ -62,7 +62,7 @@ def forecast_weather(df):
     """Функиця прогнозирования температуры на январь 2020 года"""
 
     # Создание нового DataFrame для обучения
-    jan_df = df[(df['month'] == 1)]
+    jan_df = df.query('month == 1')
     jan_df = jan_df.dropna(how='any', axis=0)
 
     # Создание тестовых и обучаемых данных
